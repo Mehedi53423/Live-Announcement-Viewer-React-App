@@ -1,0 +1,132 @@
+body {
+  margin: 0;
+  font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
+  background: linear-gradient(120deg, #f0f4ff, #fef9f4);
+  min-height: 100vh;
+}
+
+.viewer-container {
+  max-width: 720px;
+  margin: 60px auto;
+  padding: 0 20px;
+  text-align: center;
+}
+
+.viewer-title {
+  font-size: 2rem;
+  margin-bottom: 10px;
+  color: #333;
+}
+
+.status-badge {
+  display: inline-block;
+  padding: 8px 16px;
+  border-radius: 999px;
+  font-size: 0.95rem;
+  margin-bottom: 25px;
+  font-weight: 600;
+}
+
+.status-badge.ok {
+  background-color: #d1fae5;
+  color: #065f46;
+}
+
+.status-badge.fail {
+  background-color: #fee2e2;
+  color: #991b1b;
+}
+
+.status-badge.pulse {
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0.5); }
+  70% { box-shadow: 0 0 0 15px rgba(34, 197, 94, 0); }
+  100% { box-shadow: 0 0 0 0 rgba(34, 197, 94, 0); }
+}
+
+.announcement-card {
+  background: #ffffff;
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.1);
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  border-left: 5px solid #3b82f6;
+}
+
+.announcement-card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 15px 35px rgba(0,0,0,0.15);
+}
+
+.announcement-title {
+  color: #1d4ed8;
+  margin-top: 0;
+  font-size: 1.3rem;
+}
+
+.section {
+  margin-top: 20px;
+}
+
+.section ul {
+  margin: 5px 0 0 20px;
+  padding: 0;
+  list-style-type: disc;
+  color: #333;
+}
+
+.no-announcement {
+  font-size: 1.1rem;
+  margin-top: 40px;
+  color: #666;
+}
+
+.animate-card {
+  animation: slideFade 0.7s ease-in-out;
+}
+
+.fade-in {
+  animation: fadeIn 0.8s ease forwards;
+  opacity: 0;
+}
+
+.reconnect-btn {
+  background-color: #3b82f6;
+  color: white;
+  border: none;
+  padding: 8px 20px;
+  font-weight: bold;
+  font-size: 0.95rem;
+  border-radius: 20px;
+  margin-bottom: 20px;
+  margin-left: 20px;
+  cursor: pointer;
+  transition: background 0.3s ease, transform 0.2s ease;
+}
+
+.reconnect-btn:hover {
+  background-color: #2563eb;
+  transform: scale(1.05);
+}
+
+
+@keyframes slideFade {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeIn {
+  to {
+    opacity: 1;
+  }
+}
